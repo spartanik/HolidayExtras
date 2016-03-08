@@ -1,0 +1,30 @@
+/* Empty. Add your own CSS if you like */
+body {
+	    background-color: #cceaff;
+	
+}
+
+/* .he-header {
+	background-color: #264C7A;
+	text-shadow: 0 1px 0 #325D94;
+}
+
+.title {
+	color: #ffffff;
+	
+} */
+
+.he-logo  {
+	margin: 0 !important;
+	padding: 0 !important;
+	position: absolute;
+	background-image:
+		url('../img/holiday-extras-logo.png');
+	width: 146px;
+	height: 80px;
+	text-indent: -5000em;
+	z-index: 9999;
+	text-shadow: 0 1px 0 #325D94;
+}
+
+

@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="initial-scale=1, maximum-scale=1, user-scalable=no, width=device-width">
+    <title></title>
+
+    <link href="lib/ionic/css/ionic.css" rel="stylesheet">
+
+    <!-- IF using Sass (run gulp sass first), then uncomment below and remove the CSS includes above
+    <link href="css/ionic.app.css" rel="stylesheet">
+    -->
+
+    <link href="css/style.css" rel="stylesheet">
+
+    <!-- ionic/angularjs js -->
+    <script src="lib/ionic/js/ionic.bundle.js"></script>
+
+    <!-- cordova script (this will be a 404 during development) -->
+    <!-- <script src="cordova.js"></script> -->
+
+    <!-- your app's js -->
+    <script src="js/jquery-1.12.1.min.js"></script>
+    <script src="js/app.js"></script>
+    
+  </head>
+  <body ng-app="holidayextras" ng-controller="flickr" ng-init="dupa='dupa'">
+
+	<ion-pane> <ion-header-bar class="bar-positive">
+	<div class="he-header">
+	<a class="he-logo" href="http://www.holidayextras.co.uk/">holidayextras.co.uk</a>
+		<h1 class="title">Flick Photo Stream 4 Holiday Extras 
+		</h1>
+		<a class="button icon-right ion-chevron-right button-balanced" ng-click="toLinkedin()">Rafal Trzeciak</a>
+
+	</div>
+	</ion-header-bar> 
+	<ion-content> 
+		
+	
+	
+	<div class="gallery-list">
+
+		<div class="card">
+			<div class="item item-divider">
+				<h2>{{photoData.title}}</h2>
+				<h3>
+					<a href="{{photoData.link}}">{{photoData.link}}</a>
+				</h3>
+			</div>
+		</div>
+
+		<div class="list card" ng-repeat="photo in photoData.items">
+
+
+			<div class="item item-avatar">
+				<img src="{{photo.media.m}}">
+				<h2><a href="{{photo.link}}">{{photo.title}}</a></h2>
+				<p>by <a href="https://www.flickr.com/people/{{photo.author_id}}">{{photo.author}}</a></p>
+			</div>
+
+			<div class="item item-body">
+				 <!-- <img class="full-image normalized"  src="{{photo.media.m}}">
+				  --><img src="">
+				 
+				 <p ng-bind-html="photo.description"></p>
+				<p>
+					tags: {{photo.tags}}
+				</p>
+				
+				
+			</div>
+
+		</div>
+
+	</div>
+	
+	</ion-content> </ion-pane>
+	<div id="scriptspace">
+	</div>
+</body>
+</html>
